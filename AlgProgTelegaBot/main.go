@@ -420,27 +420,6 @@ func helpHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 		Text:   "Доступные команды:\n" + strings.Join(commands, ", "),
 	})
 }
-
-func helloHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
-	b.SendMessage(ctx, &bot.SendMessageParams{
-		ChatID:    update.Message.Chat.ID,
-		Text:      "Привет, *" + bot.EscapeMarkdown(update.Message.From.FirstName) + "*",
-		ParseMode: models.ParseModeMarkdown,
-	})
-}
-
-//	 Name    string
-//		Teacher string
-//		Room    string
-//		Count   int16
-//		Day     int16
-func testHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
-	b.SendMessage(ctx, &bot.SendMessageParams{
-		ChatID: update.Message.Chat.ID,
-		Text:   "Выполнил команду TEST",
-	})
-}
-
 func defaultHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 	b.SendMessage(ctx, &bot.SendMessageParams{
 		ChatID: update.Message.Chat.ID,
