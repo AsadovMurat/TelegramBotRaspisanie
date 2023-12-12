@@ -115,7 +115,6 @@ func main() {
 	b.RegisterHandler(bot.HandlerTypeMessageText, "/whereStudents", bot.MatchTypeExact, whereStudentsHandler)
 	b.RegisterHandler(bot.HandlerTypeMessageText, "/whereTeacher", bot.MatchTypeExact, whereTeacherHandler)
 	b.RegisterHandler(bot.HandlerTypeMessageText, "/whenExam", bot.MatchTypeExact, whenExamHandler)
-	b.RegisterHandler(bot.HandlerTypeMessageText, "/test", bot.MatchTypeExact, testHandler)
 
 	b.Start(ctx)
 }
